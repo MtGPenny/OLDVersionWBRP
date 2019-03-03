@@ -1,0 +1,289 @@
+
+
+.Red {
+	color: #E80000;
+}
+
+#apDiv1 {
+	position: absolute;
+	width: 532px;
+	height: 31px;
+	z-index: 1;
+	left: 471px;
+	top: 181px;
+}
+
+#apDiv2 {
+	position: absolute;
+	width: 281px;
+	height: 94px;
+	z-index: 1;
+	left: 747px;
+	top: 716px;
+	visibility: visible;
+	overflow: visible;
+}
+
+#apDiv3 {
+	position: absolute;
+	width: 530px;
+	height: 29px;
+	z-index: 2;
+	left: 173px;
+	top: 177px;
+}
+
+#apDiv4 {
+	position: absolute;
+	width: 402px;
+	height: 44px;
+	z-index: 1;
+	left: 541px;
+	top: 589px;
+}
+
+.twoColElsLtHdr #container #mainContent table tr td p .style33 strong strong {
+	font-size: small;
+}
+
+.twoColElsLtHdr #container #mainContent table tr td p .style33 strong {
+	font-size: small;
+}
+
+body {
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	padding: 0;
+	text-align: center;
+	height: 175px;
+	border-color: #FBFBFD;
+	border-bottom: 0 solid;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 100%;
+	font-color: #000;
+	background: url(../images/wallpaper.jpg) no-repeat fixed center center; /* Wallpaper goes here */
+	bottom: auto;
+	margin: 0 0 0;
+
+
+}
+
+/* Tips for Elastic layouts
+1. Since the elastic layouts overall sizing is based on the user's default fonts size, they are more unpredictable. Used correctly, they are also more accessible for those that need larger fonts size since the line length remains proportionate.
+2. Sizing of divs in this layout are based on the 100% font size in the body element. If you decrease the text size overall by using a font-size: 80% on the body element or the #container, remember that the entire layout will downsize proportionately. You may want to increase the widths of the various divs to compensate for this.
+3. If font sizing is changed in differing amounts on each div instead of on the overall design (ie: #sidebar1 is given a 70% font size and #mainContent is given an 85% font size), this will proportionately change each of the divs overall size. You may want to adjust based on your final font sizing.
+*/
+.twoColElsLtHdr #container {
+	width: 46em; /* this width will create a container that will fit in an 800px browser window if text is left at browser default font sizes */
+	text-align: left; /* this overrides the text-align: center on the body element. */
+	padding: 0;
+	margin: 0 auto;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #000;
+	border: thin solid #FFF;
+	background: #FFF;
+}
+
+.twoColElsLtHdr #header {
+	background-color: #FFFFFF;
+	padding: 0;
+	border: 0 solid #000000;
+	border-bottom-width: thin;
+}
+
+.twoColElsLtHdr #header h1 {
+	margin: 0; /* using padding instead of margin will allow you to keep the element away from the edges of the div */
+	padding: 10px 0 10px 8px;
+}
+
+/* Tips for sidebar1:
+1. Be aware that if you set a font-size value on this div, the overall width of the div will be adjusted accordingly.
+2. Since we are working in ems, it's best not to use padding on the sidebar itself. It will be added to the width for standards compliant browsers creating an unknown actual width.
+3. Space between the side of the div and the elements within it can be created by placing a left and right margin on those elements as seen in the ".twoColElsLtHdr #sidebar1 p" rule.
+*/
+.twoColElsLtHdr #sidebar1 {
+	float: left;
+	width: 9em; /* top and bottom padding create visual space within this div */
+	background-color: #FFF;
+	padding: 10px 0;
+	border: 0 solid #000000;
+	border-top-color: #CCCCCC;
+	bottom: auto;
+}
+
+.twoColElsLtHdr #sidebar1 h3, .twoColElsLtHdr #sidebar1 p {
+	margin-left: 10px; /* the left and right margin should be given to every element that will be placed in the side columns */
+	margin-right: 10px;
+}
+
+/* Tips for mainContent:
+1. If you give this #mainContent div a font-size value different than the #sidebar1 div, the margins of the #mainContent div will be based on its font-size and the width of the #sidebar1 div will be based on its font-size. You may wish to adjust the values of these divs.
+2. The space between the mainContent and sidebar1 is created with the left margin on the mainContent div.  No matter how much content the sidebar1 div contains, the column space will remain. You can remove this left margin if you want the #mainContent div's text to fill the #sidebar1 space when the content in #sidebar1 ends.
+3. To avoid float drop, you may need to test to determine the approximate maximum image/element size since this layout is based on the user's font sizing combined with the values you set. However, if the user has their browser font size set lower than normal, less space will be available in the #mainContent div than you may see on testing.
+4. In the Internet Explorer Conditional Comment below, the zoom property is used to give the mainContent "hasLayout." This avoids several IE-specific bugs that may occur.
+*/
+.twoColElsLtHdr #mainContent {
+	margin: 0 1.5em 0 10em;
+	padding-left: 0;
+	border: 0 #000000;
+
+}
+
+.twoColElsLtHdr #footer {
+	padding: 0 10px;
+	background-color: #FFFFFF;
+}
+
+.twoColElsLtHdr #footer p {
+	margin: 0; /* zeroing the margins of the first element in the footer will avoid the possibility of margin collapse - a space between divs */
+	padding: 10px 0; /* padding on this element will create space, just as the the margin would have, without the margin collapse issue */
+}
+
+/* Miscellaneous classes for reuse */
+.fltrt { /* this class can be used to float an element right in your page. The floated element must precede the element it should be next to on the page. */
+	float: right;
+	margin-left: 8px;
+}
+
+.fltlft { /* this class can be used to float an element left in your page */
+	float: left;
+	margin-right: 8px;
+}
+
+.clearfloat { /* this class should be placed on a div or break element and should be the final element before the close of a container that should fully contain a float */
+	clear: both;
+	height: 0;
+	font-size: 0;
+	line-height: 0;
+	margin-left: 12em;
+}
+
+
+
+a:link {
+	color: blue;
+	text-decoration: none;
+}
+
+a:visited {
+	text-decoration: none;
+	color: blue;
+}
+
+a:hover {
+	text-decoration: none;
+	color: #000099;
+}
+
+a:active {
+	text-decoration: none;
+	color: #FF0000;
+}
+
+body, td, th {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.style1 {
+	font-family: Arial, Helvetica, sans-serif
+}
+
+.style2 {
+	color: blue;
+}
+
+.style3 {
+	color: #FDFDFA
+}
+
+.style5 {
+	color: #552B00
+}
+
+.style6 {
+	color: #DCD08F
+}
+
+.style7 {
+	color: #FFFFFF
+}
+
+.style10 {
+	color: #000000
+}
+
+.style17 {
+	font-size: xx-small
+}
+
+.style17 {
+	font-size: smaller
+}
+
+.style18 {
+	font-family: Arial, Helvetica, sans-serif;
+	color: #000000;
+	font-size: 16px;
+}
+
+.style19 {
+	font-size: 80px
+}
+
+.style20 {
+	font-size: 36px
+}
+
+.style21 {
+	font-size: 16px
+}
+
+.style22 {
+	font-size: xx-small
+}
+
+.style27 {
+	font-size: 75%
+}
+
+.style29 {
+	font-size: 16px;
+	font-weight: bold;
+	color: #333333;
+}
+
+.style30 {
+	font-size: 14px
+}
+
+.style32 {
+	color: #000000;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: small;
+}
+
+.style33 {
+	font-size: small;
+}
+
+.style34 {
+	font-size: x-small
+}
+
+.twoColElsLtHdr #sidebar1 {
+	padding-top: 30px;
+}
+
+.twoColElsLtHdr #mainContent {
+	zoom: 1;
+	padding-top: 15px;
+}
+
+.container{
+	background-color: lightgray;
+	border-radius: 20px;
+}
+
+
